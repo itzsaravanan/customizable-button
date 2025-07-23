@@ -1,10 +1,3 @@
-let bgcolor = document.getElementById("bgColorInput").value;
-let fontcolor = document.getElementById("fontColorInput").value;
-let fontsize = document.getElementById("fontSizeInput").value;
-let fontweight = document.getElementById("fontWeightInput").value;
-let padding = document.getElementById("paddingInput").value;
-let border = document.getElementById("borderRadiusInput").value;
-
 function apply() {
     let bgcolor = document.getElementById("bgColorInput").value;
     let fontcolor = document.getElementById("fontColorInput").value;
@@ -12,10 +5,13 @@ function apply() {
     let fontweight = document.getElementById("fontWeightInput").value;
     let padding = document.getElementById("paddingInput").value;
     let border = document.getElementById("borderRadiusInput").value;
-    document.getElementById("customButton").style.color = fontcolor;
-    document.getElementById("customButton").style.fontSize = fontsize;
-    document.getElementById("customButton").style.backgroundColor = bgcolor;
-    document.getElementById("customButton").style.fontWeight = fontweight;
-    document.getElementById("customButton").style.padding = padding;
-    document.getElementById("customButton").style.borderRadius = border;
+
+    let button = document.getElementById("customButton");
+
+    button.style.color = fontcolor;
+    button.style.fontSize = fontsize + "px";
+    button.style.backgroundColor = bgcolor;
+    button.style.fontWeight = fontweight;
+    button.style.padding = padding + "px";
+    button.style.borderRadius = border + "px";
 }
